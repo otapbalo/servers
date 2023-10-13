@@ -1,0 +1,705 @@
+all:
+  hosts:
+    test:
+      ansible_host: 192.168.6.241
+      ansible_user: root
+      ansible_ssh_pass: 12345
+      hostname: test
+      pptp_password: 9vVZdR3TLvEh3ync
+  children:
+    office:
+      hosts:
+        zabbix.local:
+          ansible_host: 192.168.5.143
+          ansible_user: root
+          ansible_ssh_pass: 123
+          hostname: zabbix
+          slap_rid: 106
+    dev:
+      hosts:
+        dev1.justmoby.com:
+          ansible_host: 178.63.18.218
+          ansible_user: root
+          ansible_ssh_pass: 6AU8FwmsU2p5GN
+          hostname: dev1.justmoby.com
+          slap_rid: 90
+        dev4.justmoby.com:
+          ansible_host: 65.109.12.120
+          ansible_user: root
+          ansible_ssh_pass: L#a^&ROqz38oZeDb*WK8NPrgZ
+          hostname: dev4.justmoby.com
+          slap_rid: 129
+    treastone:
+      children:
+        treastone_main:
+          hosts:
+            trestone.com:
+              ansible_host: 176.9.65.187
+              ansible_user: root
+              ansible_ssh_pass: n3AR7EFRFa2kH4
+              hostname: treastone.com
+              slap_rid: 75
+        treastone_fs_main:
+          hosts:
+            treastone_saturn:
+              ansible_host: 62.210.38.61
+              ansible_user: andy
+              ansible_ssh_pass: qZQ8vYzU3mJt8Ve
+              ansible_become_pass: qZQ8vYzU3mJt8Ve
+              hostname: saturn.treastone.com
+              slap_rid: 89
+        treastone_fs:
+          hosts:
+            mimas.treastone.com:
+              ansible_host: 108.181.100.75
+              ansible_user: root
+              ansible_ssh_pass: GHdU8NMtrp1c2
+              hostname: mimas.treastone.com
+              slap_rid: 88
+#            enceladus.treastone.com:
+#              ansible_host: 163.172.49.86
+#              ansible_user: andy
+#              ansible_ssh_pass: qZQ8vYzU3mJt8Ve
+#              ansible_become_pass: qZQ8vYzU3mJt8Ve
+#              hostname: enceladus.treastone.com
+#              slap_rid: 87
+            tethys.treastone.com:
+              ansible_host: 54.37.140.53
+              ansible_user: root
+              ansible_ssh_pass: hK8nSofDtcWapbecTHjk
+              hostname: tethys.treastone.com
+              slap_rid: 93
+            dione.treastone.com:
+              ansible_host: 209.90.225.194
+              ansible_user: root
+              ansible_ssh_pass: mBgQ8q96Gn
+              hostname: dione.treastone.com
+              slap_rid: 86
+#            rhea.treastone.com:
+#              ansible_host: 74.121.191.74
+#              ansible_user: root
+#              ansible_ssh_pass: OszLw4787Q
+#              hostname: rhea.treastone.com
+#              slap_rid: 91
+            titan.treastone.com:
+              ansible_host: 51.15.181.121
+              ansible_user: root
+              ansible_ssh_pass: dE8vdSJ89yBz7mw
+#              ansible_become_pass: dE8vdSJ89yBz7mw
+              hostname: titan.treastone.com
+              slap_rid: 37
+            iapetus.treastone.com:
+              ansible_host: 81.17.57.32
+              ansible_user: root
+              ansible_ssh_pass: sXDU3V34YtqBta08Q1Bx
+              hostname: iapetus.treastone.com
+              slap_rid: 29
+            prometheus.treastone.com:
+              ansible_host: 163.172.45.28
+              ansible_user: root
+              ansible_ssh_pass: jzDs9LNfPnVdxYP
+#              ansible_become_pass: jzDs9LNfPnVdxYP
+              hostname: prometheus.treastone.com
+              slap_rid: 30
+            hyperion.treastone.com:
+              ansible_host: 51.15.1.28
+              ansible_user: root
+              ansible_ssh_pass: 6dE3JT4nzgJZwhw
+#              ansible_become_pass: 6dE3JT4nzgJZwhw
+              hostname: hyperion.treastone.com
+              slap_rid: 108
+            phoebe.treastone.com:
+              ansible_host: 146.0.36.55
+              ansible_user: root
+              ansible_ssh_pass: vZRQ3lktW4FaUC
+              hostname: phoebe.treastone.com
+              slap_rid: 111
+            janus.treastone.com:
+              ansible_host: 89.163.225.161
+              ansible_user: root
+              ansible_ssh_pass: H4U8hlAidneo0D
+              hostname: janus.treastone.com
+              slap_rid: 112
+            epimetheus.treastone.com:
+              ansible_host: 103.161.225.81
+              ansible_user: root
+              ansible_ssh_pass: gs.3Xfx2M8,5
+              hostname: epimetheus.treastone.com
+              slap_rid: 113
+            helene.treastone.com:
+              ansible_host: 103.161.225.82
+              ansible_user: root
+              ansible_ssh_pass: E2Cfnx~4aR9%
+              hostname: helene.treastone.com
+              slap_rid: 114
+            telesto.treastone.com:
+              ansible_host: 139.99.68.10
+              ansible_user: root
+              ansible_ssh_pass: VQD5YSCD9TufS23T
+#              ansible_ssh_pass: BYmqsD8m9CUqYuD
+#              ansible_become_pass: VQD5YSCD9TufS23T
+              hostname: telesto.treastone.com
+              slap_rid: 115
+            calypso.treastone.com:
+              ansible_host: 108.181.22.193
+              ansible_user: root
+              ansible_ssh_pass: YUJxhyErkZ6NPBp
+              hostname: calypso.treastone.com
+              slap_rid: 116
+            atlas.treastone.com:
+              ansible_host: 202.87.221.66
+              ansible_user: root
+#              ansible_port: 44911
+              ansible_ssh_pass: ">5)XB:Q)8hjYc!#n"
+              hostname: atlas.treastone.com
+              slap_rid: 117
+            pandora.treastone.com:
+              ansible_host: 23.19.226.70
+              ansible_user: root
+              ansible_ssh_pass: b@4Hq3T_n.s9
+              hostname: pandora.treastone.com
+              slap_rid: 118
+            pan.treastone.com:
+              ansible_host: 108.181.100.29
+              ansible_user: root
+              ansible_ssh_pass: NjFiZGIwOWRlNTQ3
+              hostname: pan.treastone.com
+              slap_rid: 119
+            ymir.treastone.com:
+              ansible_host: 103.161.224.243
+              ansible_user: root
+              ansible_ssh_pass: 5G,w836jNz^a
+              hostname: ymir.treastone.com
+              slap_rid: 120
+            tarvos.treastone.com:
+              ansible_host: 202.87.222.58
+              ansible_user: root
+#              ansible_port: 50933
+              ansible_ssh_pass: c07sA48XoBVoMG2
+              hostname: tarvos.treastone.com
+              slap_rid: 120
+            paaliaq.treastone.com:
+              ansible_host: 209.58.188.162
+              ansible_user: root
+              ansible_ssh_pass: 3guCt%5@N8h^
+              hostname: paaliaq.treastone.com
+              slap_rid: 121
+            methone.treastone.com:
+              ansible_host: 54.37.140.44
+              ansible_user: root
+              ansible_ssh_pass: CrVyjtNeq7yz0Gc24eYL
+              hostname: methone.treastone.com
+              slap_rid: 127
+            pallene.treastone.com:
+              ansible_host: 167.114.108.125
+              ansible_user: root
+              ansible_ssh_pass: ixqdCCKBJHQRDZgmq3rk
+              hostname: pallene.treastone.com
+              slap_rid: 130
+            ijiraq.treastone.com:
+              ansible_host: 162.210.195.208
+              ansible_user: root
+              ansible_ssh_pass: 7sVu5vgSkFILiScKEQeT
+              hostname: ijiraq.treastone.com
+              slap_rid: 131
+            suttungr.treastone.com:
+              ansible_host: 147.78.2.188
+              ansible_user: root
+              ansible_ssh_pass: nyIOg96TH5EBiLWrWRfV
+              hostname: suttungr.treastone.com
+              slap_rid: 132
+            kiviuq.treastone.com:
+              ansible_host: 162.210.195.218
+              ansible_user: root
+              ansible_ssh_pass: Y50EqAESlx0Lbe2oepE3
+              hostname: kiviuq.treastone.com
+              slap_rid: 133
+            mundilfari.treastone.com:
+              ansible_host: 147.78.2.249
+              ansible_user: root
+              ansible_ssh_pass: lOZo5jWx1D3gZRXH6F50
+              hostname: mundilfari.treastone.com
+              slap_rid: 134
+        treastone_ps:
+          hosts:
+            keeper.treastone.com:
+              ansible_host: 65.21.35.162
+              ansible_user: root
+              ansible_ssh_pass: jze4L89Zm8JpXL
+              hostname: keeper.treastone.com
+              slap_rid: 23
+            krypton.treastone.com:
+              ansible_host: 65.21.239.213
+              ansible_user: root
+              ansible_ssh_pass: kYdUXWpUSEM8Yr
+              hostname: krypton.treastone.com
+              slap_rid: 99
+#            venus.treastone.com:
+#              ansible_host: 65.108.73.28
+#              ansible_user: root
+#              ansible_ssh_pass: YJSrSfiftNCJ58
+#              hostname: venus.treastone.com
+#              slap_rid: 105
+            ps-lsa.treastone.com:
+              ansible_host: 95.216.8.114
+              ansible_user: root
+              ansible_ssh_pass: Gmu2HrE2HrgS8i
+              hostname: ps-lsa.treastone.com
+              slap_rid: 109
+            pslsaus.treastone.com:
+              ansible_host: 23.19.26.199
+              ansible_user: root
+              ansible_ssh_pass: X3lp8lqGZLLEzUYFWarZ
+              hostname: pslsaus.treastone.com
+              slap_rid: 147
+            pslsius.treastone.com:
+              ansible_host: 23.19.26.218
+              ansible_user: root
+              ansible_ssh_pass: 37AHzpqFNsPCiBAyRZwJ
+              hostname: pslsius.treastone.com
+              slap_rid: 110
+            psonch.treastone.com:
+              ansible_host: 147.78.2.230
+              ansible_user: root
+              ansible_ssh_pass: xOQmxP54TZb5aFMCG4Yj
+              hostname: psonch.treastone.com
+              slap_rid: 135
+            psonade.treastone.com:
+              ansible_host: 136.243.155.66
+              ansible_user: root
+              ansible_ssh_pass: 8W5Wk7cuHs3HJa
+              hostname: psonade.treastone.com
+              slap_rid: 148
+        treastone_mp:
+          hosts:
+            mpa-us.treastone.com:
+              ansible_host: 209.192.165.246
+              ansible_user: root
+              ansible_ssh_pass: R2wHDMaKZFbB
+              hostname: mpa-us.treastone.com
+              slap_rid: 103
+            mp-he.treastone.com:
+              ansible_host: 65.21.134.158
+              ansible_user: root
+              ansible_ssh_pass: tb5CUKjaCpgJZF
+              hostname: mp-he.treastone.com
+              slap_rid: 92
+            mpi-us.treastone.com:
+              ansible_host: 209.192.165.242
+              ansible_user: root
+              ansible_ssh_pass: uUrFXhzdwpnR
+              hostname: mpi-us.treastone.com
+              slap_rid: 102
+            mpi-he.treastone.com:
+              ansible_host: 65.108.73.33
+              ansible_user: root
+              ansible_ssh_pass: jX35Kx5nDbQXnP
+              hostname: mpi-he.treastone.com
+              slap_rid: 104
+            mpp.treastone.com:
+              ansible_host: 209.192.165.250
+              ansible_user: root
+              ansible_ssh_pass: EEnY78JV9sCt
+              hostname: mpp.treastone.com
+              slap_rid: 121
+            mpa-de.treastone.com:
+              ansible_host: 167.235.3.132
+              ansible_user: root
+              ansible_ssh_pass: UtvuDKhHR9GDJm
+              hostname: mpa-de.treastone.com
+              slap_rid: 122
+            mpi-de.treastone.com:
+              ansible_host: 167.235.3.133
+              ansible_user: root
+              ansible_ssh_pass: utc6WfxMLXuuHP
+              hostname: mpi-de.treastone.com
+              slap_rid: 123
+            mpi-dl.treastone.com:
+              ansible_host: 209.192.232.78
+              ansible_user: root
+              ansible_ssh_pass: Xsz279Z7h9xp
+              hostname: mpi-dl.treastone.com
+              slap_rid: 124
+            mpa-dl.treastone.com:
+              ansible_host: 209.192.232.74
+              ansible_user: root
+              ansible_ssh_pass: k35B88qAaEmP
+              hostname: mpa-dl.treastone.com
+              slap_rid: 125
+        treastone_ch:
+          hosts:
+            ch.treastone.com:
+              ansible_host: 195.154.251.241
+              ansible_user: crash
+              ansible_ssh_pass: b5Cbg1mYGMFZ1Ev
+              ansible_become_pass: B6GZqp3TG9DWCdhX
+              hostname: ch.treastone.com
+              slap_rid: 85
+    jigsawpuzzlesage:
+      hosts:
+        jigsawpuzzlesage.com:
+          ansible_host: 144.76.16.208
+          ansible_user: root
+          ansible_ssh_pass: XJYzyhxGnpRzBD
+          hostname: jigsawpuzzlesage.com
+          slap_rid: 10
+    sweetgamesbox:
+      hosts:
+        sweetgamesbox.com:
+          ansible_host: 65.21.184.169
+          ansible_user: root
+          ansible_ssh_pass: saLhmbJqusCkCcJvpRse1
+          hostname: sweetgamesbox.com
+          slap_rid: 18
+        puzzles.sweetgamesbox.com:
+          ansible_host: 5.9.55.174
+          ansible_user: root
+          ansible_ssh_pass: 8gUaKELv3bvQYY
+          hostname: puzzles.sweetgamesbox.com
+          slap_rid: 15
+    furtabas:
+      hosts:
+        furtabas.com:
+          ansible_host: 135.181.152.42
+          ansible_user: root
+          ansible_ssh_pass: 9zsgrEMqGDDALvFS
+          hostname: furtabas.com
+          slap_rid: 27
+    mushtrip:
+      hosts:
+        mushtrip.com:
+          ansible_host: 88.198.14.59
+          ansible_user: root
+          ansible_ssh_pass: aeR1xoo1ru5AhTh7leimup5su
+          hostname: mushtrip.com
+          slap_rid: 100
+        mushtrip.cz:
+          ansible_host: 135.181.24.96
+          ansible_user: root
+          ansible_ssh_pass: RM7CW9NxTxfkMfddVLHv
+          hostname: mushtrip.cz
+          slap_rid: 144
+        mustread.mushtrip.com:
+          ansible_host: 88.99.25.153
+          ansible_user: root
+          ansible_ssh_pass: aV4qTMTu8AQGst # nLT3EfnWqqDKbv
+          hostname: mustread.mushtrip.com
+          slap_rid: 149
+        cp.mushtrip.com:
+          ansible_host: 128.140.126.99
+          ansible_user: root
+          ansible_ssh_pass: 9Lb4sMfWCat4kwfe4m4m4
+          hostname: cp.mushtrip.com
+          slap_rid: 180
+        inapp.mushtrip.com:
+          ansible_host: 128.140.89.32
+          ansible_user: root
+          ansible_ssh_pass: TEiJijRJgR7Mrb7s3XCN1
+          hostname: inapp.mushtrip.com
+          slap_rid: 181
+        lr.mushtrip.com:
+          ansible_host: 49.13.12.132
+          ansible_user: root
+          ansible_ssh_pass: JpUTENhMVaWL3b77ir9r2
+          hostname: lr.mushtrip.com
+          slap_rid: 182
+        vpn.mushtrip.com:
+          ansible_host: 128.140.86.63
+          ansible_user: root
+          ansible_ssh_pass: L4qTLFxLhJcx4Mp7dVjP1
+          hostname: vpn.mushtrip.com
+          slap_rid: 183
+    mushtrip-vpn-main:
+      hosts:
+        paris.mushtrip.com:
+          ansible_host: 62.210.122.220
+          ansible_user: root
+          ansible_ssh_pass: aJh8CR6RLrjPeMmE
+          hostname: paris.mushtrip.com
+          slap_rid: 26
+        vpn-paris.mushtrip.com:
+          ansible_host: 195.154.253.227
+          ansible_user: root
+          ansible_ssh_pass: f4e81ade7d6f9fb342541152d08e7a97
+          hostname: vpn-paris.mushtrip.com
+          slap_rid: 138
+          innodb_buffer_pool_size: 4G
+          radius_server: 127.0.0.1
+        vpn-radius.mushtrip.com:
+          ansible_host: 88.198.146.160
+          ansible_user: root
+          ansible_ssh_pass: xgwkvUqdanTdeFhXkTET1
+          hostname: vpn-radius.mushtrip.com
+          slap_rid: 184
+          radius_server: 127.0.0.1
+    mushtrip-vpn-node:
+      hosts:
+        seattle.mushtrip.com:
+          ansible_host: 173.0.54.34
+          ansible_user: root
+          ansible_ssh_pass: DnQPKnM8gUCfDmYW
+          hostname: seattle.mushtrip.com
+          slap_rid: 24
+        vpn-amsterdam.mushtrip.com:
+          ansible_host: 163.172.215.224
+          ansible_user: root
+          ansible_ssh_pass: A6s2fVW2x9FALTdj
+          hostname: vpn-amsterdam.mushtrip.com
+          slap_rid: 25
+        vpn-singapore.mushtrip.com:
+          ansible_host: 139.99.52.53
+          ansible_user: root
+          ansible_ssh_pass: 3DNEDixUcHoeSGxE1Jdn
+          hostname: vpn-singapore.mushtrip.com
+          slap_rid: 136
+        vpn-tel-aviv.mushtrip.com:
+          ansible_host: 147.78.2.208
+          ansible_user: root
+          ansible_ssh_pass: 96KON9TDFMYQimOy7ZwD
+          hostname: vpn-tel-aviv.mushtrip.com
+          slap_rid: 137
+        vpn-seattle.mushtrip.com:
+          ansible_host: 216.244.76.210
+          ansible_user: root
+          ansible_ssh_pass: d68ce7c7d7d2bb7d48
+          hostname: vpn-seattle.mushtrip.com
+          slap_rid: 139
+        vpn-dusseldorf.mushtrip.com:
+          ansible_host: 89.163.213.227
+          ansible_user: root
+          ansible_ssh_pass: 5CoDIQS9bbLUfpF7JE2D
+          hostname: vpn-dusseldorf.mushtrip.com
+          slap_rid: 140
+        vpn-montreal.mushtrip.com:
+          ansible_host: 192.99.193.172
+          ansible_user: root
+          ansible_ssh_pass: FpfC2vyNBUscnr6n1YdS
+          hostname: vpn-montreal.mushtrip.com
+          slap_rid: 141
+        vpn-los-angeles.mushtrip.com:
+          ansible_host: 64.31.55.219
+          ansible_user: root
+          ansible_ssh_pass: A1b6GyrdDN5YVQrnRb07
+          hostname: vpn-los-angeles.mushtrip.com
+          slap_rid: 142
+        vpn-london.mushtrip.com:
+          ansible_host: 57.128.150.139
+          ansible_user: root
+          ansible_ssh_pass: R3mRFKbrRFm9RymgWgo2
+          hostname: vpn-london.mushtrip.com
+          slap_rid: 143
+        vpn-jakarta.mushtrip.com:
+          ansible_host: 103.173.75.171
+          ansible_user: root
+          ansible_ssh_pass: 1Q!hOITMjEA#
+          hostname: vpn-jakarta.mushtrip.com
+          slap_rid: 145
+        vpn-istanbul.mushtrip.com:
+          ansible_host: 46.235.14.172
+          ansible_user: root
+          ansible_ssh_pass: 2GJ19XAyU%9A
+          hostname: vpn-istanbul.mushtrip.com
+          slap_rid: 146
+        vpn-italy.mushtrip.com:
+          ansible_host: 176.126.83.140
+          ansible_user: root
+          ansible_ssh_pass: MArPJAXTVdxtpLPy7M2a
+          hostname: vpn-italy.mushtrip.com
+          slap_rid: 152
+        vpn-hong-kong.mushtrip.com:
+          ansible_host: 103.75.117.233
+          ansible_user: root
+          ansible_ssh_pass: hhw4Nr4l4UkA6UwT0jV5
+          hostname: vpn-hong-kong.mushtrip.com
+          slap_rid: 153
+        vpn-amsterdam2.mushtrip.com:
+          ansible_host: 51.158.149.177
+          #ansible_user: andy
+          #ansible_ssh_pass: hwr4l4UkA6Uw
+          ansible_user: root
+          ansible_ssh_pass: gQX5zCH47wUxbUrB
+          hostname: vpn-amsterdam2.mushtrip.com
+          slap_rid: 154
+          oif: enp1s0
+        vpn-helsinki.mushtrip.com:
+          ansible_host: 37.143.129.120
+          ansible_user: root
+          ansible_ssh_pass: 37wEpZFihjeE0VBLFNZd
+          hostname: vpn-helsinki.mushtrip.com
+          slap_rid: 155
+        vpn-montreal2.mushtrip.com:
+          ansible_host: 158.69.43.240
+          ansible_user: root
+          ansible_ssh_pass: 2JgRzVmZViw3lxJKAeh6
+          hostname: vpn-montreal2.mushtrip.com
+          slap_rid: 156
+        vpn-dallas.mushtrip.com:
+          ansible_host: 74.63.219.228
+          ansible_user: root
+          ansible_ssh_pass: JeOtFJXhkN4GIA1mRS9u
+          hostname: vpn-dallas.mushtrip.com
+          slap_rid: 157
+        vpn-tel-aviv2.mushtrip.com:
+          ansible_host: 147.78.2.250
+          ansible_user: root
+          ansible_ssh_pass: kO1RDUTXpoYSdP0jtEFd
+          hostname: vpn-tel-aviv2.mushtrip.com
+          slap_rid: 158
+        vpn-los-angeles2.mushtrip.com:
+          ansible_host: 74.63.233.78
+          ansible_user: root
+          ansible_ssh_pass: CyBvCwjMcWfOla05GLuV
+          hostname: vpn-los-angeles2.mushtrip.com
+          slap_rid: 159
+        vpn-london2.mushtrip.com:
+          ansible_host: 51.89.206.38
+          ansible_user: root
+          ansible_ssh_pass: 0zwpVdMwWE0refkuMsP8
+          hostname: vpn-london2.mushtrip.com
+          slap_rid: 160
+        vpn-dusseldorf2.mushtrip.com:
+          ansible_host: 89.163.213.66
+          ansible_user: root
+          ansible_ssh_pass: bPGzvwlhAKcFXDLN2lPT
+          hostname: vpn-dusseldorf2.mushtrip.com
+          slap_rid: 161
+        vpn-bursa.mushtrip.com:
+          ansible_host: 185.123.100.244
+          ansible_user: root
+          ansible_ssh_pass: 3udXIFJeTUPN7HEm5IaC
+          hostname: vpn-bursa.mushtrip.com
+          slap_rid: 162
+        vpn-sao-paulo.mushtrip.com:
+          ansible_host: 109.104.155.250
+          ansible_user: root
+          ansible_ssh_pass: t0eiIGsFO6tcp2QCEI9U
+          hostname: vpn-sao-paulo.mushtrip.com
+          slap_rid: 163
+        vpn-oslo.mushtrip.com:
+          ansible_host: 185.90.61.61
+          ansible_user: root
+          ansible_ssh_pass: aGCn4yd4jp3WBJh9NguP
+          hostname: vpn-oslo.mushtrip.com
+          slap_rid: 164
+        vpn-tokyo.mushtrip.com:
+          ansible_host: 103.106.228.193
+          ansible_user: root
+          ansible_ssh_pass: 0NM12O899X47KrFi8ljC
+          hostname: vpn-tokyo.mushtrip.com
+          slap_rid: 165
+        vpn-bogota.mushtrip.com:
+          ansible_host: 181.119.30.12
+          ansible_user: root
+          ansible_ssh_pass: f1df3f651fab7069ca1bbbd787b9c941
+          hostname: vpn-bogota.mushtrip.com
+          slap_rid: 166
+          oif: eno1
+        vpn-buenos-aires.mushtrip.com:
+          ansible_host: 131.255.4.12
+          ansible_user: root
+          ansible_ssh_pass: 72549bd4136689ed5f44fc4b55255e52
+          hostname: vpn-buenos-aires.mushtrip.com
+          slap_rid: 167
+          oif: enp4s0
+        vpn-paris3.mushtrip.com:
+          ansible_host: 195.154.106.221
+          ansible_user: root
+          ansible_ssh_pass: 6rGoHS3RV2x1qRn
+          hostname: vpn-paris3.mushtrip.com
+          slap_rid: 169
+          oif: enp1s0
+        vpn-amsterdam3.mushtrip.com:
+          ansible_host: 51.158.154.73
+          ansible_user: root
+          ansible_ssh_pass: U1WPcC1LSxNF3DJ
+          hostname: vpn-amsterdam3.mushtrip.com
+          slap_rid: 170
+          oif: enp1s0
+        vpn-warsaw.mushtrip.com:
+          ansible_host: 54.37.140.2
+          ansible_user: root
+          ansible_ssh_pass: UgNgoecNY6dCWJXMC2nf
+          hostname: vpn-warsaw.mushtrip.com
+          slap_rid: 174
+          oif: eth0
+        vpn-lisbon.mushtrip.com:
+          ansible_host: 185.113.143.164
+          ansible_user: root
+          ansible_ssh_pass: p149kqWtRgOJBXXhwiNE
+          hostname: vpn-lisbon.mushtrip.com
+          slap_rid: 175
+          oif: eth0
+        vpn-kansas-city.mushtrip.com:
+          ansible_host: 109.104.152.23
+          ansible_user: root
+          ansible_ssh_pass: Uxgua9QwLTzgzHz622Kl
+          hostname: vpn-kansas-city.mushtrip.com
+          slap_rid: 176
+          oif: eth0
+        vpn-paris4.mushtrip.com:
+          ansible_host: 62.210.71.29
+          ansible_user: root
+          ansible_ssh_pass: U1WPcC1LSxNF3DJ
+          hostname: vpn-paris4.mushtrip.com
+          slap_rid: 177
+          oif: eno1
+        vpn-paris2.mushtrip.com:
+          ansible_host: 62.210.209.183
+          ansible_user: root
+          ansible_ssh_pass: ZkHSM5GxxQ3Lw6K
+          hostname: vpn-paris2.mushtrip.com
+          slap_rid: 151
+    stavrio:
+      hosts:
+        stavrio.com:
+          ansible_host: 136.243.89.106
+          ansible_user: root
+          ansible_ssh_pass: 3fyLrGxU7echi6
+          hostname: stavrio.com
+          slap_rid: 101
+    monitoring:
+      hosts:
+        zabbix2.justmoby.com:
+          ansible_host: 148.251.137.7
+          ansible_user: root
+          ansible_ssh_pass: mauXHqc4HJVVeR
+          hostname: zabbix2.justmoby.com
+          slap_rid: 19
+    puzzleit:
+      hosts:
+        puzzleit.ru:
+          ansible_host: 65.21.136.150
+          ansible_user: root
+          ansible_ssh_pass: bm8BhCbKaQsjTi
+          hostname: puzzleit.ru
+          slap_rid: 95
+        puzzleit.club:
+          ansible_host: 195.154.242.82
+          ansible_user: root
+          ansible_ssh_pass: W8Brd7PPrR7k3Yn
+          hostname: puzzleit.club
+          slap_rid: 150
+    yandex_cloud:
+      hosts:
+        wiki2.justmoby.com:
+          ansible_hosts: 51.250.106.105
+          ansible_user: root
+          ansible_ssh_pass: veehoh3OhXu1eim3
+          hostname: wiki
+          slap_rid: 107
+    graylog:
+      hosts:
+        graylog.treastone.com: 
+          ansible_hosts: 88.99.194.26
+          ansible_user: root
+          ansible_ssh_pass: NeKHRR9n8MKN5X
+          hostname: graylog.treastone.com
+          slap_rid: 128
+    craftstruff:
+      hosts:
+        craftstruff.com:
+          ansible_hosts: 135.181.46.49
+          ansible_user: root
+          ansible_ssh_pass: TcggXE97rXCrtMMw9U4T
+          hostname: craftstruff.com
+          slap_rid: 144
